@@ -1,0 +1,48 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Front-End Software Developer",
+    "imageAlt": "Banner image"
+  },
+  "about": {
+    "greeting": "Hello!",
+    "description": "Front-End developer with expertise in React, Next.js, and TypeScript, currently studying Computer Science at PUC-PR. With 2 years of intensive study, I master Tailwind CSS, REST APIs, Git, and Docker, along with knowledge of MySQL and MongoDB. My experience as a Graphic Designer has added UI/UX insight to projects. I am organized, proactive, and have intermediate English (B1), always striving to improve technically.",
+    "openCV": "Open CV",
+    "imageAlt": "About me"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Some projects I developed to practice and showcase my skills",
+    "technologiesUsed": "Technologies used:",
+    "code": "Code",
+    "projectDescriptions": {
+      "weatherApp": "Weather forecast app with light/dark theme support. Forecast by city or current location, with clean, responsive UI and internationalization.",
+      "reactFirebaseAuth": "Academic project with Firebase authentication and database. Registration, login, and data visualization with Tailwind CSS interface.",
+      "reactDevOps": "React app with mocked API, automated tests (Jest), and automated deployment via GitHub Actions. Focus on DevOps and CI/CD.",
+      "imcCalculator": "IMC calculator with React, supporting metric and imperial systems. Personalized messages, animations with Framer Motion."
+    }
+  },
+  "contact": {
+    "title": "Let's talk!",
+    "description": "I'm open to new opportunities and collaborations. Get in touch through the channels below or fill out the form.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "socials": "Or find me on social media"
+    }
+  }
+}

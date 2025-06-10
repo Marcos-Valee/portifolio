@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Portfólio – Marcos do Vale
 
-## Getting Started
+Bem-vindo ao meu portfólio! Aqui você encontra meus principais projetos, habilidades e um pouco sobre minha trajetória como desenvolvedor Front-End.
 
-First, run the development server:
+## 👨‍💻 Sobre Mim
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Desenvolvedor Front-End com experiência em React, Next.js, TypeScript e Tailwind CSS. Estudante de Ciência da Computação na PUC-PR, apaixonado por tecnologia, design e soluções criativas. Sempre buscando evoluir e contribuir em projetos inovadores!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tecnologias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Node.js
+- Docker
+- MySQL & MongoDB
+- UI/UX Design
+- Git & GitHub Actions
+- Jest & Testing Library
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Projetos em Destaque
 
-## Learn More
+- **WeatherApp** – Aplicação de previsão do tempo com tema claro/escuro, busca por cidade/localização e internacionalização.
+- **React Firebase Auth** – Projeto acadêmico com autenticação e banco de dados no Firebase.
+- **React DevOps** – App React com API simulada, testes automatizados e CI/CD com GitHub Actions.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Acesse
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [LinkedIn](https://www.linkedin.com/in/marcos-do-vale-/)
+- [GitHub](https://github.com/Marcos-Valee)

@@ -1,0 +1,48 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "Sobre Mim",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "subtitle": "Desenvolvedor de Software Front-End",
+    "imageAlt": "Imagem do banner"
+  },
+  "about": {
+    "greeting": "Olá!",
+    "description": "Desenvolvedor Front-End com expertise em React, Next.js e TypeScript, cursando Ciência da Computação na PUC-PR. Com 2 anos de estudos intensivos, domino Tailwind CSS, APIs REST, Git e Docker, além de conhecimentos em MySQL e MongoDB. Minha experiência como Designer Gráfico agregou visão de UI/UX aos projetos. Sou organizado, proativo e com inglês intermediário (B1), sempre buscando evoluir tecnicamente.",
+    "openCV": "Abrir CV",
+    "imageAlt": "Sobre mim"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "description": "Alguns dos projetos que desenvolvi para praticar e demonstrar minhas habilidades",
+    "technologiesUsed": "Tecnologias utilizadas:",
+    "code": "Código",
+    "projectDescriptions": {
+      "weatherApp": "Aplicação de previsão do tempo com suporte a temas claro/escuro. Previsão por cidade ou localização atual, com visual limpo, responsivo e internacionalização.",
+      "reactFirebaseAuth": "Projeto acadêmico com autenticação e banco de dados no Firebase. Cadastro, login e visualização de dados com interface em Tailwind CSS.",
+      "reactDevOps": "Aplicação React com API simulada, testes automatizados (Jest) e deploy automatizado via GitHub Actions. Foco em DevOps e CI/CD.",
+      "imcCalculator": "Calculadora de IMC com React, suporte aos sistemas métrico e imperial. Mensagens personalizadas, animações com Framer Motion."
+    }
+  },
+  "contact": {
+    "title": "Vamos conversar!",
+    "description": "Estou aberto a novas oportunidades e colaborações. Entre em contato através dos canais abaixo ou preencha o formulário.",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "message": "Mensagem",
+      "submit": "Enviar Mensagem"
+    },
+    "contactInfo": {
+      "title": "Informações de Contato",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "socials": "Ou me encontre nas redes sociais"
+    }
+  } 
+}
