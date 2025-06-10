@@ -1,5 +1,9 @@
 # 🚀 Portfólio – Marcos do Vale
 
+![portifólio     Screenshot](https://raw.githubusercontent.com/Marcos-Valee/portifolio\public\images\capturaDeTela.png)
+
+Confira o projeto online: [WeatherApp - Deploy no vercel](https://portifolio-omega-brown-20.vercel.app/)
+
 Bem-vindo ao meu portfólio! Aqui você encontra meus principais projetos, habilidades e um pouco sobre minha trajetória como desenvolvedor Front-End.
 
 ## 👨‍💻 Sobre Mim

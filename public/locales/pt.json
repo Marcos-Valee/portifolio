@@ -11,7 +11,7 @@
   },
   "about": {
     "greeting": "Olá!",
-    "description": "Desenvolvedor Front-End com expertise em React, Next.js e TypeScript, cursando Ciência da Computação na PUC-PR. Com 2 anos de estudos intensivos, domino Tailwind CSS, APIs REST, Git e Docker, além de conhecimentos em MySQL e MongoDB. Minha experiência como Designer Gráfico agregou visão de UI/UX aos projetos. Sou organizado, proativo e com inglês intermediário (B1), sempre buscando evoluir tecnicamente.",
+    "description": "Sou um profissional apaixonado por tecnologia, destaco minha comunicação clara e eficiente, facilidade para aprender de forma autodidata, proatividade na busca de soluções e constante evolução, além de grande capacidade de trabalho em equipe e colaboração. Tenho facilidade para lidar com desafios, resiliência diante de mudanças e foco em entregar valor em cada projeto. Estou sempre aberto a feedbacks e novas ideias, buscando contribuir positivamente em todos os times dos quais faço parte.",
     "openCV": "Abrir CV",
     "imageAlt": "Sobre mim"
   },
@@ -44,5 +44,5 @@
       "github": "GitHub",
       "socials": "Ou me encontre nas redes sociais"
     }
-  } 
+  }
 }
