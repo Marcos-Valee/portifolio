@@ -24,7 +24,8 @@
       "weatherApp": "Aplicação de previsão do tempo com suporte a temas claro/escuro. Previsão por cidade ou localização atual, com visual limpo, responsivo e internacionalização.",
       "reactFirebaseAuth": "Projeto acadêmico com autenticação e banco de dados no Firebase. Cadastro, login e visualização de dados com interface em Tailwind CSS.",
       "reactDevOps": "Aplicação React com API simulada, testes automatizados (Jest) e deploy automatizado via GitHub Actions. Foco em DevOps e CI/CD.",
-      "imcCalculator": "Calculadora de IMC com React, suporte aos sistemas métrico e imperial. Mensagens personalizadas, animações com Framer Motion."
+      "imcCalculator": "Calculadora de IMC com React, suporte aos sistemas métrico e imperial. Mensagens personalizadas, animações com Framer Motion.",
+      "agencia": "Site institucional desenvolvido em React para agência de marketing. Apresentação profissional, responsiva, com animações e integração de contato usando Nodemailer."
     }
   },
   "contact": {

@@ -1,6 +1,6 @@
 # 🚀 Portfólio – Marcos do Vale
 
-![portifólio     Screenshot](https://raw.githubusercontent.com/Marcos-Valee/portifolio\public\images\capturaDeTela.png)
+![portifólio Screenshot](https://raw.githubusercontent.com/Marcos-Valee/portifolio\public\images\capturaDeTela.png)
 
 Confira o projeto online: [WeatherApp - Deploy no vercel](https://portifolio-omega-brown-20.vercel.app/)
 

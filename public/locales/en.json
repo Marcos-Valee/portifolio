@@ -24,7 +24,8 @@
       "weatherApp": "Weather forecast app with light/dark theme support. Forecast by city or current location, with clean, responsive UI and internationalization.",
       "reactFirebaseAuth": "Academic project with Firebase authentication and database. Registration, login, and data visualization with Tailwind CSS interface.",
       "reactDevOps": "React app with mocked API, automated tests (Jest), and automated deployment via GitHub Actions. Focus on DevOps and CI/CD.",
-      "imcCalculator": "IMC calculator with React, supporting metric and imperial systems. Personalized messages, animations with Framer Motion."
+      "imcCalculator": "IMC calculator with React, supporting metric and imperial systems. Personalized messages, animations with Framer Motion.",
+      "agencia" : "Institutional website developed in React for a marketing agency. Professional and responsive presentation with Framer Motion animations and contact form integration with Nodemailer."
     }
   },
   "contact": {

@@ -24,13 +24,35 @@ export type Project = {
 
 const projects: Project[] = [
   {
+    photo: "/images/projectsImages/siteAgencia.png",
+    altPhoto: "Agencia Image",
+    title: "Agência de Marketing",
+    descriptionKey: "projects.projectDescriptions.agencia",
+    gitHub: "https://github.com/Marcos-Valee/Weather-App",
+    deploy: "https://agencia-pinhao.vercel.app/",
+    technologies: [
+      "react",
+      "typescript",
+      "tailwindcss",
+      "nextjs",
+      "framerMotion",
+      "nodemailer",
+    ],
+  },
+  {
     photo: "/images/projectsImages/weatherApp.png",
     altPhoto: "WeatherApp Image",
     title: "WeatherApp",
     descriptionKey: "projects.projectDescriptions.weatherApp",
     gitHub: "https://github.com/Marcos-Valee/Weather-App",
     deploy: "https://weather-app-murex-rho.vercel.app/",
-    technologies: ["react", "typescript", "tailwindcss", "nextjs", "framerMotion"],
+    technologies: [
+      "react",
+      "typescript",
+      "tailwindcss",
+      "nextjs",
+      "framerMotion",
+    ],
   },
   {
     photo: "/images/projectsImages/firebaseWeb.png",
@@ -48,7 +70,13 @@ const projects: Project[] = [
     descriptionKey: "projects.projectDescriptions.reactDevOps",
     gitHub: "https://github.com/Marcos-Valee/DevOpsReact",
     deploy: "#",
-    technologies: ["react", "javascript", "tailwindcss", "jest", "githubActions"],
+    technologies: [
+      "react",
+      "javascript",
+      "tailwindcss",
+      "jest",
+      "githubActions",
+    ],
   },
   {
     photo: "/images/projectsImages/imcCalculator.png",
@@ -71,6 +99,7 @@ const technologyIcons: Record<string, string> = {
   jest: "/images/imagesTecnlogies/jest.png",
   githubActions: "/images/imagesTecnlogies/gitHub.png",
   javascript: "/images/imagesTecnlogies/javascript.png",
+  nodemailer: "/images/imagesTecnlogies/nodemailer.png",
 };
 
 export default function Projects() {
@@ -147,7 +176,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative px-12">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-6">
               {projects.map((project, index) => (
@@ -229,16 +258,17 @@ export default function Projects() {
             </div>
           </div>
 
+          {/* Chevrons */}
           <button
             onClick={scrollPrev}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800/90 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-full shadow-md z-10 transition hover:scale-110 cursor-pointer"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-800/90 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-full shadow-md transition hover:scale-110 cursor-pointer"
             aria-label="Projetos anteriores"
           >
             <FaChevronCircleLeft className="text-2xl" />
           </button>
           <button
             onClick={scrollNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800/90 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-full shadow-md z-10 transition hover:scale-110 cursor-pointer"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-800/90 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-full shadow-md transition hover:scale-110 cursor-pointer"
             aria-label="Próximos projetos"
           >
             <FaChevronCircleRight className="text-2xl" />
