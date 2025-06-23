@@ -175,9 +175,8 @@ export default function About() {
             <div className="border-t border-gray-200 dark:border-gray-600 mb-8"></div>
 
             <motion.a
-              href="/caminho/para/seu/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/CurriculoMarcos.pdf"
+              download
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium inline-block hover:bg-blue-700 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
