@@ -35,7 +35,11 @@
       "name": "Nome",
       "email": "Email",
       "message": "Mensagem",
-      "submit": "Enviar Mensagem"
+      "submit": "Enviar Mensagem",
+      "send" : "Enviando...",
+      "successfully" : "Mensagem enviada com sucesso! ✅",
+      "error" : "Erro ao enviar mensagem ❌",
+      "unexpected" : "Erro inesperado ao enviar a mensagem."
     },
     "contactInfo": {
       "title": "Informações de Contato",

@@ -17,7 +17,7 @@ export type Project = {
   altPhoto: string;
   title: string;
   descriptionKey: string;
-  gitHub: string;
+  gitHub?: string;
   deploy?: string;
   technologies: string[];
 };
@@ -28,7 +28,6 @@ const projects: Project[] = [
     altPhoto: "Agencia Image",
     title: "Agência de Marketing",
     descriptionKey: "projects.projectDescriptions.agencia",
-    gitHub: "https://github.com/Marcos-Valee/Weather-App",
     deploy: "https://agencia-pinhao.vercel.app/",
     technologies: [
       "react",
@@ -37,21 +36,6 @@ const projects: Project[] = [
       "nextjs",
       "framerMotion",
       "nodemailer",
-    ],
-  },
-  {
-    photo: "/images/projectsImages/weatherApp.png",
-    altPhoto: "WeatherApp Image",
-    title: "WeatherApp",
-    descriptionKey: "projects.projectDescriptions.weatherApp",
-    gitHub: "https://github.com/Marcos-Valee/Weather-App",
-    deploy: "https://weather-app-murex-rho.vercel.app/",
-    technologies: [
-      "react",
-      "typescript",
-      "tailwindcss",
-      "nextjs",
-      "framerMotion",
     ],
   },
   {
@@ -69,7 +53,6 @@ const projects: Project[] = [
     title: "React DevOps CI/CD",
     descriptionKey: "projects.projectDescriptions.reactDevOps",
     gitHub: "https://github.com/Marcos-Valee/DevOpsReact",
-    deploy: "#",
     technologies: [
       "react",
       "javascript",
@@ -134,13 +117,10 @@ export default function Projects() {
 
   useEffect(() => {
     if (emblaApi) {
-      // Set initial scroll snap points
       setScrollSnaps(emblaApi.scrollSnapList());
-      // Set selected index on init and when changed
       emblaApi.on("select", onSelect);
       onSelect();
 
-      // Cleanup
       return () => {
         emblaApi.off("select", onSelect);
       };
@@ -238,19 +218,17 @@ export default function Projects() {
                         className="flex-1 flex items-center justify-center gap-2 bg-gray-900 dark:bg-gray-700 text-white font-medium px-3 py-2 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition text-sm"
                       >
                         <FaGithub className="text-lg" />
-                        {t("projects.code")}
+                        {project.gitHub ? t("projects.code") : "Private"}
                       </a>
-                      {project.deploy && (
-                        <a
-                          href={project.deploy}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white font-medium px-3 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
-                        >
-                          <FiExternalLink className="text-lg" />
-                          Demo
-                        </a>
-                      )}
+                      <a
+                        href={project.deploy}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 bg-blue-600 text-white font-medium px-3 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
+                      >
+                        <FiExternalLink className="text-lg" />
+                        {project.deploy ? "Demo" : "Private"}
+                      </a>
                     </div>
                   </div>
                 </div>

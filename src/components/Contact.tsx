@@ -3,9 +3,65 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
+type FormDataProps = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 export default function Contact() {
   const { t } = useTranslation();
+
+  const [formData, setFormData] = useState<FormDataProps>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(t("contact.form.send"));
+
+    try {
+      const res = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        setStatus(t("contact.form.successfully"));
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus(data.message || t("contact.form.error"));
+      }
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Erro no envio:", error);
+      setStatus(t("contact.form.unexpected"));
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-16 px-4 bg-gray-50 dark:bg-gray-900">
@@ -26,14 +82,14 @@ export default function Contact() {
         </motion.div>
 
         <div className="flex flex-col md:flex-row gap-12">
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="md:w-1/2"
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
@@ -45,6 +101,7 @@ export default function Contact() {
                   type="text"
                   id="name"
                   name="name"
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -60,6 +117,7 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -74,6 +132,7 @@ export default function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  onChange={handleChange}
                   rows={5}
                   required
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -81,12 +140,16 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors cursor-pointer"
               >
-                {t("contact.form.submit")}
+                
+                {loading ? t("contact.form.send") : t("contact.form.submit")}
               </button>
+              {status && (
+                <p className="mt-4 font-semibold text-sm text-gray-700">{status}</p>
+              )}
             </form>
-          </motion.div> */}
+          </motion.div>
 
           {/* Informações de contato */}
           <motion.div
@@ -190,18 +253,21 @@ export default function Contact() {
                     {
                       icon: <FaLinkedin />,
                       url: "https://www.linkedin.com/in/marcos-do-vale-/",
-                      color: "text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900"
+                      color:
+                        "text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900",
                     },
                     {
                       icon: <FaGithub />,
                       url: "https://github.com/Marcos-Valee",
-                      color: "text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                      color:
+                        "text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700",
                     },
                     {
                       icon: <FaWhatsapp />,
                       url: "https://wa.me/41998464689",
-                      color: "text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900"
-                    }
+                      color:
+                        "text-green-600 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900",
+                    },
                   ].map((social, index) => (
                     <a
                       key={index}
